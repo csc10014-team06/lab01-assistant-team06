@@ -58,3 +58,14 @@ lab01-assistant-team06/
 ├── docs/README.md docs/team.md
 └── scripts/check_env.py
 ```
+
+
+## Environment Verification
+
+After installing the dependencies, verify the development environment:
+
+```bash
+python scripts/check_env.py
+```
+
+The environment checker should report `All good!`, and all six smoke tests should pass.

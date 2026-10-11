@@ -1,4 +1,5 @@
 # ui/
 
-The user interface will live here (Streamlit or Gradio, Week 7 of the practical track).
-Empty on purpose in Lab 1.
+The UI will provide a simple and user-friendly interface for interacting with the application.
+
+Note: This is an initial placeholder plan. Details will be updated as the project requirements become clearer.

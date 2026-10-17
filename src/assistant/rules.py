@@ -29,6 +29,15 @@ def reply(message: str, offices: dict[str, dict[str, str]] | None = None) -> str
     for name, row in offices.items():
         if name in text:
             return f"{row['name']}: room {row['room']}, open {row['hours']}."
+
+    generic_words = {"office", "center"}
+    words = set(text.split())
+    if text not in generic_words:
+        for name, row in offices.items():
+            keywords = {w for w in name.split() if len(w) > 2 and w not in generic_words}
+            if text in name or (keywords & words):
+                return f"{row['name']}: room {row['room']}, open {row['hours']}."
+
     return "I don't know that yet. Try asking about an office, e.g. 'training office'."
 
 def get_help_message() -> str:

@@ -23,3 +23,11 @@ def test_health_center_lookup():
 
 def test_admissions_office_lookup():
     assert "A.105" in reply("When is the Admissions Office open?")
+
+
+def test_partial_office_lookup_training():
+    assert "I.101" in reply("training")
+
+
+def test_partial_office_lookup_in_question():
+    assert "I.101" in reply("Where is training?")

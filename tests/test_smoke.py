@@ -31,3 +31,11 @@ def test_partial_office_lookup_training():
 
 def test_partial_office_lookup_in_question():
     assert "I.101" in reply("Where is training?")
+
+
+def test_finance_office_lookup():
+    assert "I.103" in reply("Where is the Finance Office?")
+
+
+def test_career_center_lookup():
+    assert "C.102" in reply("When is the Career Center open?")
